@@ -40,9 +40,7 @@ var updateNote = (title) => {
 var deleteNote = (title) => {
 	
 	var notes = fetchAllNotes();
-	console.log(notes.length);
 	var filteredNotes = notes.filter(note => note.title !== title);
-	console.log(filteredNotes.length);
 	saveNotes(filteredNotes);
 
 	return notes.length !== filteredNotes.length;
